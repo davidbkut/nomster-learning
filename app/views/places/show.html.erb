@@ -126,7 +126,7 @@
   <% @place.photos.each do |photo| %>
     <div class="col-12 col-sm-6">
       <% if photo.picture.present? %>
-        <%= image_tag photo.picture, class: 'img-fluid' %>
+        <%= image_tag photo.picture.url, class: 'img-fluid' %>
       <% end %>
       <% if photo.caption.present? %>
         <%= photo.caption %></p>
