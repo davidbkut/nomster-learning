@@ -6,7 +6,8 @@
 
     <% if place.user.present? %>
       <small><%= place.user.email %></small>
-    <% end %>
+  </div>
+<% end %>
 
 <% if place.comments.present? %>
   <div class="col-12">
@@ -20,3 +21,7 @@
     </div>
   <% end %>
 <% end %>
+
+<div class="col-10 offset-1">
+    <%= will_paginate @places %>
+</div>
